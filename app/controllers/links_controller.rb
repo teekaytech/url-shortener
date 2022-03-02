@@ -1,26 +1,30 @@
 class LinksController < ApplicationController
-  before_action :links, only: [:create, :destroy]
+  before_action :all_links, only: %i[index create destroy]
 
   def index
     @link = Link.new
   end
 
   def create
+    shortener = LinkShortener.new(url: link_params[:original])
+    @link = shortener.shorten
   end
 
   def show
+    puts 'SHOW'
   end
 
   def destroy
+    puts 'DELETE'
   end
-  
+
   private
-  
+
   def link_params
     params.require(:link).permit(:original, :code, :clicks)
   end
-  
-  def links
-    Link.all.order('id desc')
+
+  def all_links
+    @links = Link.all.limit(10)
   end
 end

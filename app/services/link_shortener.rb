@@ -1,8 +1,7 @@
 class LinkShortener
   attr_reader :url, :link_class
 
-  def initialize(url, link = Link)
-    puts here
+  def initialize(link = Link, url:)
     @url = url
     @link_class = link
   end
