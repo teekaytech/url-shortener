@@ -1,0 +1,8 @@
+<section class="form">
+  <h1>Enter the URL to be shortened</h1>
+  <%= render 'error_messages', link: @link %>
+  <%= render 'form', link: @link %>
+</section>
+<section id="links" class="links">
+  <%= @links.inspect if @links.present? %>
+</section>
