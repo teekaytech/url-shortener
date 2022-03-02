@@ -1,9 +1,17 @@
-<section class="form">
-  <h1>Enter the URL to be shortened</h1>
-  <%= render 'links/partials/form', link: @link %>
-</section>
-<section class="response" id="response">
-</section>
-<section id="links" class="links">
-  <%= render 'links/partials/links', links: @links %>
-</section>
+<main>
+  <h1>URL Shortener</h1>
+  <div class="container">
+    <section class="items section-a">
+      <section class="form">
+        <h4>Enter the URL:</h4>
+        <%= render 'links/partials/form', link: @link %>
+      </section>
+      <section class="response" id="response">
+      </section>
+    </section>
+  
+    <section id="links" class="items section-b">
+      <%= render 'links/partials/links', links: @links %>
+    </section>
+  </div>
+</main>

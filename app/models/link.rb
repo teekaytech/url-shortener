@@ -1,5 +1,5 @@
 class Link < ApplicationRecord
-  validates_presence_of :original
+  validates_presence_of :original, message: 'URL cannot be blank'
   validates_uniqueness_of :code
 
   validate :url_format, on: :create

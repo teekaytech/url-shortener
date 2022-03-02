@@ -1,4 +1,4 @@
-<article>
+<article class="link">
   <p><%= link.original %></p>
   <p><%= link_to current_link_url(link.code), current_link_path(link.code), target: "_blank" %></p>
   <p> <%= link_to '🗑', link_path(link.code), method: :delete %></p>

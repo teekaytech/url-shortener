@@ -1,3 +1,121 @@
-// Place all the styles related to the Links controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif, serif;
+  background-color: #eee;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+main {
+  padding: 2rem;
+  
+  h1 {
+    background-color: #878ede;
+    text-align: center;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 2em;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 0 2rem;
+  border: 3px solid #ccc;
+  padding: 3rem;
+  
+  h4 {
+    font-size: 1.2em;
+  }
+  
+  .section-a {
+    width: 35%;
+  }
+
+  .section-b {
+    width: 65%;
+  }
+}
+
+h1, h4 {
+  margin-bottom: 1rem;
+}
+
+.form {
+  .form-control {
+    width: 100%;
+    padding: 12px 20px;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    margin-bottom: 0.8rem;
+
+    &:focus {
+      border: 3px solid #878ede;
+      background-color: #fff;
+    }
+  }
+  
+  .btn {
+    background-color: #fff;
+    border: 0.3rem solid #878ede;
+    color: #000;
+    padding: 0.5rem 32px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #878ede;
+      color: #fff;
+    }
+  }
+}
+
+.errors {
+  margin-top: 1rem;
+  border: 2px solid #B00100;
+  
+  h6 {
+    background-color: #B00100;
+    color: #fff;
+  }
+
+  .errors-list {
+    margin-left: 0.5rem;
+    list-style-position: inside;
+  }
+}
+
+.url {
+  text-align: center;
+  margin-top: 1rem;
+  border: 0.5rem solid #878ede;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #878ede;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .section-a, .section-b {
+      width: 100%;
+    }
+  }
+}
