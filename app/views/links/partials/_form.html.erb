@@ -1,0 +1,6 @@
+<%= form_for link, remote: true do |form| %>
+  <div class="form-content">
+      <%= form.text_field :original, class: 'form-control', placeholder: 'E.g. https://example.com/pages/css-validator/'%>
+      <%= form.submit  value: 'Shorten', class:'btn' %>
+  </div>
+<% end %>

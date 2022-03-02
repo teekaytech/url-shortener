@@ -1,0 +1,20 @@
+<main>
+  <h1>URL Shortener</h1>
+  <div class="container">
+    <section class="items section-a">
+      <section class="form">
+        <h4>Enter the URL:</h4>
+        <%= render 'links/partials/form', link: @link %>
+      </section>
+      <section class="response" id="response">
+      </section>
+    </section>
+  
+    <div  class="items section-b">
+      <h4>Recently shortened links:</h4>
+      <section id="links" class="links">
+        <%= render 'links/partials/links', links: @links %>
+      </section>
+    </div>
+  </div>
+</main>

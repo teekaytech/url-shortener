@@ -1,0 +1,10 @@
+<% if errors.present? && errors.any? %>
+  <div class="errors">
+    <h6><%= pluralize(errors.count, "error") %> has occurred:</h6>
+    <ul class="errors-list">
+      <% errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

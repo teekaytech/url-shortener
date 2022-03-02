@@ -1,0 +1,20 @@
+<% if links.present? %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="original">Original URL</th>
+        <th class="shortened">Shortened URL</th>
+        <th class="clicks">Clicks</th>
+        <th class="action">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% links.each do |link| %>
+        <%= render 'links/partials/link', link: link %>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No links yet...</p>
+<% end %>
+
