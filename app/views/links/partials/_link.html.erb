@@ -1,5 +1,5 @@
 <article>
   <p><%= link.original %></p>
-  <p><%= current_link_url(link.code) %></p>
-  <p> <%= link_to 'Trash', link_path(link), method: :delete %></p>
+  <p><%= link_to current_link_url(link.code), current_link_path(link.code), target: "_blank" %></p>
+  <p> <%= link_to '🗑', link_path(link.code), method: :delete %></p>
 </article>
