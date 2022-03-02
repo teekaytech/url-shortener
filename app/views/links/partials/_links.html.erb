@@ -1,0 +1,6 @@
+<% if links.present? %>
+  <% links.each do |link| %>
+    <%= render 'links/partials/link', link: link %>
+  <% end %>
+<% end %>
+

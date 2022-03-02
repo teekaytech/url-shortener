@@ -1,0 +1,5 @@
+<article>
+  <p><%= link.original %></p>
+  <p><%= current_link_url(link.code) %></p>
+  <p> <%= link_to 'Trash', link_path(link), method: :delete %></p>
+</article>

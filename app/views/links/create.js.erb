@@ -1,2 +1,12 @@
+var responseContainer = document.getElementById('response');
 var linksContainer = document.getElementById('links');
-console.log(linksContainer);
+
+var errorTags = "<%= j render 'links/partials/error_messages', errors: @link.errors.full_messages %>";
+var shortenedLink = "<%= j render 'links/partials/url', link: @link %>";
+var allLinks = "<%= j render 'links/partials/links', links: @links %>";
+
+("<%= @link.errors.any? %>" === 'true') 
+    ? responseContainer.innerHTML = errorTags
+    : responseContainer.innerHTML = shortenedLink;
+
+linksContainer.innerHTML = allLinks;
