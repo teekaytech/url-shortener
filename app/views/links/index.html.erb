@@ -10,8 +10,11 @@
       </section>
     </section>
   
-    <section id="links" class="items section-b">
-      <%= render 'links/partials/links', links: @links %>
-    </section>
+    <div  class="items section-b">
+      <h4>Recently shortened links:</h4>
+      <section id="links" class="links">
+        <%= render 'links/partials/links', links: @links %>
+      </section>
+    </div>
   </div>
 </main>
