@@ -6,6 +6,9 @@
     <p><%= link_to current_link_url(link.code), current_link_path(link.code), target: "_blank" %></p>
   </td>
   <td>
+    <p> <%= link.clicks.to_i %></p>
+  </td>
+  <td>
     <p> <%= link_to '🗑', link_path(link.code), method: :delete %></p>
   </td>
 </tr>

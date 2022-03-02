@@ -12,6 +12,7 @@ class LinksController < ApplicationController
   end
 
   def show
+    @link.update(clicks: @link.clicks.to_i + 1)
     redirect_to @link.original
   end
 
