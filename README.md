@@ -12,7 +12,7 @@
 - Heroku
 - PostgreSQL v. >= 9.5
 
-## Live Demo 
+## Live Demo
 
 [Right here](https://calm-falls-19529.herokuapp.com/)
 
@@ -37,7 +37,10 @@ The following must be installed on your PC.
 - Ruby v.2.7.3
 - Rails v.6.1.4
 - PostgreSQL
+- Fly.io (Deployment)
 
+### Demo
+[URL-Shortener](https://spring-pond-4903.fly.dev/)
 ### Setup
 
 _After cloning, the following steps setup the project_
